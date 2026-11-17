@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Página v6: oferta para clínicas dentales</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#000000}a:hover{color:#333333}
+</style>
+</helmet>
+<div id="top" style="width: 100%; box-sizing: border-box; background: #FFFFFF; color: #0A0A0A; font-family: 'Archivo', system-ui, sans-serif; font-size: 19px; line-height: 1.55">
+
+<!-- BARRA DE ESCASEZ -->
+<div style="background: #FFD60A; color: #0A0A0A; text-align: center; padding: 12px 20px; font-size: 16px; font-weight: 700">
+Solo 5 clínicas piloto en Toledo con el alta gratis · Quedan [5] plazas
+</div>
+
+<!-- HERO -->
+<div style="max-width: 960px; margin: 0 auto; padding: 56px 24px 72px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center">
+<span style="font-size: 16px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #444444">Para clínicas dentales de Toledo con 100 citas al mes o más</span>
+<h1 style="margin: 0; font-weight: 900; font-size: clamp(36px, 6vw, 68px); line-height: 1.02; letter-spacing: -0.03em">Recupera las citas que hoy se pierden en tu WhatsApp. <span style="background: #FFD60A; padding: 0 8px">O no pagas el tercer mes.</span></h1>
+<p style="margin: 0; max-width: 760px; font-size: 21px; color: #222222">Contestamos a cada paciente en segundos, 24/7, reducimos al menos un 25 % las ausencias y traemos de vuelta a los pacientes que no vuelven a revisión. Listo en 7 días. Lo montamos nosotros.</p>
+
+<!-- Vídeo -->
+<div role="img" aria-label="Vídeo de 60 segundos (pendiente de grabar)" style="width: 100%; max-width: 760px; aspect-ratio: 16 / 9; border-radius: 16px; background: #0A0A0A; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px">
+<div style="width: 76px; height: 76px; border-radius: 50%; background: #FFD60A; display: flex; align-items: center; justify-content: center">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="#0A0A0A" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+<span style="font-size: 17px; font-weight: 700">Mira cómo responde a un paciente a las 21:47 (60 s)</span>
+<span style="font-size: 14px; color: #BBBBBB">[Aquí va el vídeo de la demo]</span>
+</div>
+
+<a href="#auditoria" style="display: inline-flex; flex-direction: column; align-items: center; gap: 2px; min-height: 64px; justify-content: center; padding: 12px 40px; border-radius: 12px; background: #0A0A0A; color: #FFFFFF; text-decoration: none; box-shadow: 0 6px 0 #FFD60A">
+<span style="font-size: 21px; font-weight: 800">Quiero la auditoría gratis de mi clínica →</span>
+<span style="font-size: 14px; color: #DDDDDD">Gratis · 15 minutos · Sin compromiso</span>
+</a>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; font-size: 15px; font-weight: 600; color: #333333">
+<span>✓ En el WhatsApp de siempre</span><span>✓ 1 hora de tu tiempo</span><span>✓ Sin datos de salud</span><span>✓ Garantía por escrito</span>
+</div>
+</div>
+
+<!-- PARA QUIÉN -->
+<div style="background: #F5F5F2">
+<div style="max-width: 960px; margin: 0 auto; padding: 72px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 24px">
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 32px; border-radius: 16px; background: #FFFFFF; border: 2px solid #0A0A0A">
+<h2 style="margin: 0; font-size: 26px; font-weight: 800">Esto es para tu clínica si…</h2>
+<span>✓ Tenéis 100 citas al mes o más</span>
+<span>✓ Os escriben por WhatsApp cada día</span>
+<span>✓ Recepción no llega a todo, sobre todo por la tarde y el fin de semana</span>
+<span>✓ Tenéis pacientes que llevan más de 6 meses sin revisión</span>
+<span>✓ Queréis resultados medidos, no otra herramienta que aprender</span>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 32px; border-radius: 16px; background: #FFFFFF; border: 1px solid #CCCCCC">
+<h2 style="margin: 0; font-size: 26px; font-weight: 800">No es para ti si…</h2>
+<span style="color: #333333">✗ Casi no recibís mensajes por WhatsApp</span>
+<span style="color: #333333">✗ Sois parte de una cadena que decide desde fuera</span>
+<span style="color: #333333">✗ Buscáis un chat que dé consejos de salud</span>
+<span style="color: #333333">✗ No vais a contestar cuando un paciente pida hablar con una persona</span>
+</div>
+</div>
+</div>
+
+<!-- EL PROBLEMA: 3 FUGAS -->
+<div style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; text-align: center">Tu clínica pierde dinero por <span style="background: #FFD60A; padding: 0 6px">3 agujeros</span>. Ninguno es culpa de tu equipo.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: 16px; background: #0A0A0A; color: #FFFFFF">
+<span style="font-size: 44px; font-weight: 900; color: #FFD60A; line-height: 1">1</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">WhatsApp sin respuesta</h3>
+<p style="margin: 0; color: #DDDDDD; font-size: 17px">Un paciente nuevo escribe a las 21:47. Nadie contesta hasta mañana. Esa noche reserva en la clínica que le respondió al momento.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: 16px; background: #0A0A0A; color: #FFFFFF">
+<span style="font-size: 44px; font-weight: 900; color: #FFD60A; line-height: 1">2</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Citas que no vienen</h3>
+<p style="margin: 0; color: #DDDDDD; font-size: 17px">El sillón está preparado, el equipo cobra, y el paciente no aparece. Cada ausencia es una hora pagada que no facturas.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 28px; border-radius: 16px; background: #0A0A0A; color: #FFFFFF">
+<span style="font-size: 44px; font-weight: 900; color: #FFD60A; line-height: 1">3</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Pacientes dormidos</h3>
+<p style="margin: 0; color: #DDDDDD; font-size: 17px">Cientos de pacientes que no volvieron a revisión. No porque estén descontentos: porque nadie se lo recordó.</p>
+</div>
+</div>
+<p style="margin: 0; text-align: center; font-size: 20px; font-weight: 700">Ya pagaste por traer a esos pacientes. Nosotros cerramos los agujeros.</p>
+</div>
+
+<!-- CALCULADORA -->
+<div style="background: #F5F5F2">
+<div style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center">
+<h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em">¿Cuánto se le escapa a tu clínica?</h2>
+<p style="margin: 0; color: #333333">Pon tus números. 30 segundos. Los cálculos se quedan en tu pantalla.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c6-leads" style="font-size: 15px; font-weight: 700">Consultas nuevas al mes</label>
+<input id="c6-leads" type="number" min="0" inputmode="numeric" value="{{calc.leads}}" onChange="{{onLeads}}" style="box-sizing: border-box; width: 100%; min-height: 56px; padding: 0 16px; border: 2px solid #0A0A0A; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 20px; font-weight: 700">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c6-appts" style="font-size: 15px; font-weight: 700">Citas al mes</label>
+<input id="c6-appts" type="number" min="0" inputmode="numeric" value="{{calc.appts}}" onChange="{{onAppts}}" style="box-sizing: border-box; width: 100%; min-height: 56px; padding: 0 16px; border: 2px solid #0A0A0A; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 20px; font-weight: 700">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c6-noshow" style="font-size: 15px; font-weight: 700">% que no se presenta</label>
+<input id="c6-noshow" type="number" min="0" max="100" inputmode="numeric" value="{{calc.noshow}}" onChange="{{onNoshow}}" style="box-sizing: border-box; width: 100%; min-height: 56px; padding: 0 16px; border: 2px solid #0A0A0A; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 20px; font-weight: 700">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="c6-price" style="font-size: 15px; font-weight: 700">Precio medio de una cita (€)</label>
+<input id="c6-price" type="number" min="0" inputmode="numeric" value="{{calc.price}}" onChange="{{onPrice}}" style="box-sizing: border-box; width: 100%; min-height: 56px; padding: 0 16px; border: 2px solid #0A0A0A; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 20px; font-weight: 700">
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 28px; border-radius: 16px; background: #FFFFFF; border: 2px solid #0A0A0A">
+<span style="font-size: 15px; font-weight: 700; color: #444444">Lo que pierdes hoy, cada mes</span>
+<span style="font-size: clamp(28px, 4vw, 40px); font-weight: 900; line-height: 1.1">{{out.lostLine}}</span>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 6px; padding: 28px; border-radius: 16px; background: #0A0A0A; color: #FFFFFF">
+<span style="font-size: 15px; font-weight: 700; color: #FFD60A">Lo que puedes recuperar al año</span>
+<span style="font-size: clamp(28px, 4vw, 40px); font-weight: 900; line-height: 1.1">{{out.range}}</span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #444444; text-align: center">Estimación prudente: entre un 25 y un 33 % menos de ausencias (en un hospital de Zaragoza, los recordatorios por SMS las bajaron del 12 al 8 %) y entre un 0 y un 20 % más de consultas convertidas en pacientes. Sin contar las revisiones recuperadas.</p>
+</div>
+</div>
+
+<!-- LA OFERTA (STACK) -->
+<div id="oferta" style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center">
+<span style="font-size: 16px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: #444444">Programa Agenda Llena</span>
+<h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em">Esto es todo lo que recibe tu clínica</h2>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #0A0A0A; border-radius: 16px; overflow: hidden">
+<sc-for list="{{stack}}" as="it" hint-placeholder-count="6">
+<div style="display: flex; flex-wrap: wrap; gap: 6px 24px; padding: 22px 28px; border-bottom: 1px solid #DDDDDD; align-items: baseline">
+<span style="flex: 0 0 28px; font-weight: 900; font-size: 20px">✓</span>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 800; font-size: 20px">{{it.name}}</span>
+<span style="color: #333333; font-size: 17px">{{it.desc}}</span>
+</div>
+<span style="flex: 0 0 auto; font-weight: 700; font-size: 16px">{{it.value}}</span>
+</div>
+</sc-for>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 28px; background: #FFD60A">
+<span style="font-weight: 900; font-size: 20px">+ 3 bonos para las 5 clínicas piloto</span>
+</div>
+<sc-for list="{{bonuses}}" as="b" hint-placeholder-count="3">
+<div style="display: flex; flex-wrap: wrap; gap: 6px 24px; padding: 22px 28px; border-bottom: 1px solid #DDDDDD; align-items: baseline; background: #FFFBE6">
+<span style="flex: 0 0 auto; padding: 2px 10px; border-radius: 999px; background: #0A0A0A; color: #FFD60A; font-weight: 800; font-size: 14px">{{b.tag}}</span>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 800; font-size: 20px">{{b.name}}</span>
+<span style="color: #333333; font-size: 17px">{{b.desc}}</span>
+</div>
+<span style="flex: 0 0 auto; font-weight: 700; font-size: 16px">{{b.value}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- GARANTÍA -->
+<div id="garantia" style="background: #0A0A0A; color: #FFFFFF">
+<div style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px">
+<div aria-hidden="true" style="flex: 0 0 140px; width: 140px; height: 140px; border-radius: 50%; border: 6px solid #FFD60A; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-weight: 900; color: #FFD60A; line-height: 1.1">
+<span style="font-size: 15px">GARANTÍA</span>
+<span style="font-size: 30px">-25 %</span>
+<span style="font-size: 13px">AUSENCIAS</span>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<h2 style="margin: 0; font-size: clamp(28px, 4vw, 42px); font-weight: 900; line-height: 1.1">Al menos un 25 % menos de citas perdidas en 3 meses. Si no, te devolvemos el tercer mes <span style="color: #FFD60A">y seguimos trabajando gratis hasta conseguirlo.</span></h2>
+<p style="margin: 0; color: #DDDDDD">Lo medimos frente a tu punto de partida, con los datos de tu propia agenda. Por escrito, en el contrato.</p>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 16px; background: #1A1A1A">
+<span style="font-weight: 800; color: #FFD60A">Nosotros nos comprometemos a</span>
+<span>✓ Tenerlo funcionando en 7 días</span>
+<span>✓ Responder a cada paciente en segundos, 24/7</span>
+<span>✓ Enseñarte los resultados cada mes</span>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 16px; background: #1A1A1A">
+<span style="font-weight: 800; color: #FFD60A">Tú te comprometes a</span>
+<span>✓ Atender los avisos del asistente en menos de 2 horas, en horario de clínica</span>
+<span>✓ Mantener la agenda al día y marcar las ausencias</span>
+<span>✓ 30 minutos al mes para revisar resultados</span>
+</div>
+</div>
+<span style="font-size: 14px; color: #AAAAAA">Para clínicas con 100 citas al mes o más. Si los dos hacemos nuestra parte, el riesgo es nuestro, no tuyo.</span>
+</div>
+</div>
+
+<!-- PRECIO -->
+<div id="precio" style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px; align-items: center; text-align: center">
+<h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em">Tu inversión</h2>
+<div style="width: 100%; max-width: 640px; display: flex; flex-direction: column; gap: 18px; padding: 40px 32px; border-radius: 20px; border: 3px solid #0A0A0A; box-shadow: 10px 10px 0 #FFD60A; box-sizing: border-box">
+<span style="font-size: 18px; font-weight: 800">Programa Agenda Llena</span>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center">
+<span style="font-size: 18px; color: #555555">Puesta en marcha: <span style="text-decoration: line-through">790 €</span> <strong style="color: #0A0A0A">0 € para las 5 clínicas piloto</strong></span>
+<span style="font-size: 64px; font-weight: 900; line-height: 1; letter-spacing: -0.03em">279 €<span style="font-size: 24px; font-weight: 700">/mes</span></span>
+<span style="font-size: 15px; color: #555555">Sin IVA · 3 meses con garantía · después, mes a mes</span>
+</div>
+<div style="padding: 14px 18px; border-radius: 12px; background: #F5F5F2; font-size: 16px">
+<strong>¿Prefieres pagar el año?</strong> 12 meses por 2.790 € en vez de 3.348 €: <strong>2 meses gratis</strong>. Disponible tras tu primer informe.
+</div>
+<span style="font-size: 16px; color: #333333">Con citas de 50 €, se paga solo recuperando 6 citas al mes.</span>
+<a href="#auditoria" style="display: inline-flex; align-items: center; justify-content: center; min-height: 64px; border-radius: 12px; background: #0A0A0A; color: #FFFFFF; font-size: 20px; font-weight: 800; text-decoration: none">Quiero mi auditoría gratis →</a>
+<span style="font-size: 14px; color: #555555">¿Algo más sencillo? Versión Esencial a 199 €/mes (sin campañas de revisión). Mismas condiciones.</span>
+</div>
+</div>
+
+<!-- POR QUÉ SOLO 5 -->
+<div style="background: #F5F5F2">
+<div style="max-width: 960px; margin: 0 auto; padding: 72px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: clamp(28px, 4vw, 40px); font-weight: 900; line-height: 1.1">¿Por qué solo 5 clínicas?</h2>
+<p style="margin: 0; color: #222222">Porque somos dos personas y montamos cada programa a mano, con tu equipo. Preferimos 5 clínicas con resultados que 50 a medias. Cuando estén llenas, cerramos plazas y el alta vuelve a costar 790 €.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 28px; border-radius: 16px; background: #FFFFFF; border: 2px solid #0A0A0A; text-align: center">
+<span style="font-size: 64px; font-weight: 900; line-height: 1">[5]</span>
+<span style="font-weight: 700">plazas piloto disponibles</span>
+<span style="font-size: 14px; color: #555555">Actualizado a mano por nosotros</span>
+</div>
+</div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<div style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; text-align: center">De la auditoría a resultados en 7 días</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 24px; border-radius: 16px; border: 2px solid #0A0A0A">
+<span style="font-weight: 900; font-size: 15px; color: #444444">DÍA 0</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Auditoría y punto de partida</h3>
+<p style="margin: 0; color: #333333; font-size: 17px">Medimos tus consultas, tu tiempo de respuesta y tus ausencias. Con eso medimos la garantía.</p>
+</div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 24px; border-radius: 16px; border: 2px solid #0A0A0A">
+<span style="font-weight: 900; font-size: 15px; color: #444444">DÍAS 1–7</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Lo montamos y lo apruebas</h3>
+<p style="margin: 0; color: #333333; font-size: 17px">Respuestas con la información de tu clínica, conexión a tu agenda y tu visto bueno antes de activarlo.</p>
+</div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 24px; border-radius: 16px; border: 2px solid #0A0A0A">
+<span style="font-weight: 900; font-size: 15px; color: #444444">CADA MES</span>
+<h3 style="margin: 0; font-size: 22px; font-weight: 800">Resultados medidos</h3>
+<p style="margin: 0; color: #333333; font-size: 17px">Informe con citas recuperadas, ausencias y pacientes reactivados, y 30 minutos de revisión contigo.</p>
+</div>
+</div>
+</div>
+
+<!-- PRUEBA SOCIAL -->
+<div style="background: #F5F5F2">
+<div style="max-width: 960px; margin: 0 auto; padding: 72px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-size: clamp(28px, 4vw, 40px); font-weight: 900; line-height: 1.1; text-align: center">Resultados de nuestras clínicas piloto</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 16px; background: #FFFFFF; border: 1px dashed #888888">
+<span style="font-size: 36px; font-weight: 900">[–X %]</span>
+<span style="font-weight: 700">citas perdidas</span>
+<span style="font-size: 15px; color: #555555">[Clínica piloto 1 · Toledo]</span>
+</div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 16px; background: #FFFFFF; border: 1px dashed #888888">
+<span style="font-size: 36px; font-weight: 900">[X]</span>
+<span style="font-weight: 700">pacientes reactivados</span>
+<span style="font-size: 15px; color: #555555">[Clínica piloto 2 · Toledo]</span>
+</div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 16px; background: #FFFFFF; border: 1px dashed #888888">
+<span style="font-size: 36px; font-weight: 900">[X s]</span>
+<span style="font-weight: 700">tiempo medio de respuesta</span>
+<span style="font-size: 15px; color: #555555">[Clínica piloto 3 · Toledo]</span>
+</div>
+</div>
+<p style="margin: 0; text-align: center; font-size: 15px; color: #444444">Somos nuevos y no vamos a inventar resultados. Aquí pondremos los números reales de las clínicas piloto en cuanto los tengamos. Puedes ser una de ellas.</p>
+</div>
+</div>
+
+<!-- OBJECIONES -->
+<div style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 46px); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; text-align: center">Lo que nos preguntan las clínicas</h2>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 2px solid #0A0A0A">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">«Mi programa de gestión ya manda recordatorios.»</h3>
+<p style="margin: 0; color: #333333">Perfecto: eso cubre las citas ya hechas. Nosotros cubrimos los WhatsApp que nadie contesta y los pacientes que no vuelven a revisión. Lo que nunca llega a ser cita.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 1px solid #CCCCCC">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">«Es caro.»</h3>
+<p style="margin: 0; color: #333333">Haz la cuenta con la calculadora. Con citas de 50 €, el programa se paga solo recuperando 6 citas al mes. Y si no se nota en 3 meses, te devolvemos el tercero y seguimos gratis.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 1px solid #CCCCCC">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">«No tengo tiempo para montar nada.»</h3>
+<p style="margin: 0; color: #333333">Necesitamos una hora tuya en total: 30 minutos al empezar y 30 para aprobar las respuestas. Lo demás lo hacemos nosotros.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 1px solid #CCCCCC">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">«Mis pacientes mayores prefieren hablar con una persona.»</h3>
+<p style="margin: 0; color: #333333">Y pueden: escriben «persona» y le llega a recepción. Seguís respondiendo desde vuestra app de WhatsApp Business.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 1px solid #CCCCCC">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">«¿Y los datos de mis pacientes?»</h3>
+<p style="margin: 0; color: #333333">El asistente no pide ni guarda datos de salud: solo nombre, teléfono y cita. Firmamos el contrato de encargado del tratamiento (RGPD) y los datos se quedan en la UE.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 22px 0; border-top: 1px solid #CCCCCC; border-bottom: 2px solid #0A0A0A">
+<h3 style="margin: 0; font-size: 21px; font-weight: 800">«¿Y si dice algo que no es?»</h3>
+<p style="margin: 0; color: #333333">Solo responde con la información que tú apruebas. Si no lo sabe, pasa la conversación a recepción.</p>
+</div>
+</div>
+</div>
+
+<!-- CTA FINAL + FORMULARIO -->
+<div id="auditoria" style="background: #FFD60A">
+<div style="max-width: 960px; margin: 0 auto; padding: 88px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: clamp(32px, 5vw, 52px); font-weight: 900; line-height: 1.04; letter-spacing: -0.02em">Pide la auditoría gratis de tu clínica.</h2>
+<p style="margin: 0; font-size: 19px">Te escribimos una tarde como un paciente más, medimos cuánto tardáis en responder y en 15 minutos te enseñamos lo que se pierde al mes con tus números. Te lo quedas, contrates o no.</p>
+<span style="font-weight: 800">Quedan [5] plazas piloto con el alta gratis.</span>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; background: #FFFFFF; border: 3px solid #0A0A0A">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="v6-biz" style="font-size: 15px; font-weight: 700">Nombre de la clínica</label>
+<input id="v6-biz" type="text" style="box-sizing: border-box; width: 100%; min-height: 54px; padding: 0 16px; border: 2px solid #0A0A0A; border-radius: 12px; font-family: inherit; font-size: 18px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="v6-phone" style="font-size: 15px; font-weight: 700">Tu número de WhatsApp</label>
+<input id="v6-phone" type="tel" style="box-sizing: border-box; width: 100%; min-height: 54px; padding: 0 16px; border: 2px solid #0A0A0A; border-radius: 12px; font-family: inherit; font-size: 18px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="v6-volume" style="font-size: 15px; font-weight: 700">¿Cuántas citas tenéis al mes?</label>
+<select id="v6-volume" style="box-sizing: border-box; width: 100%; min-height: 54px; padding: 0 12px; border: 2px solid #0A0A0A; border-radius: 12px; background: #FFFFFF; font-family: inherit; font-size: 18px">
+<option>Menos de 100</option>
+<option>Entre 100 y 300</option>
+<option>Más de 300</option>
+</select>
+</div>
+<div style="display: flex; gap: 10px; align-items: flex-start">
+<input id="v6-consent" type="checkbox" style="width: 22px; height: 22px; margin: 2px 0 0; flex: 0 0 auto">
+<label for="v6-consent" style="font-size: 14px; color: #333333; line-height: 1.45">He leído la <a href="#top">política de privacidad</a> y acepto que me escribáis por WhatsApp sobre la auditoría.</label>
+</div>
+<button type="button" style="min-height: 60px; border: 0; border-radius: 12px; background: #0A0A0A; color: #FFFFFF; font-family: inherit; font-size: 19px; font-weight: 800; cursor: pointer">Quiero mi auditoría gratis →</button>
+<span style="font-size: 14px; color: #444444; text-align: center">Te escribimos en menos de 1 minuto para concretar.</span>
+</div>
+</div>
+</div>
+
+<!-- P.D. -->
+<div style="max-width: 760px; margin: 0 auto; padding: 72px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 19px"><strong>P.D.</strong> Si has llegado hasta aquí, haz una cosa esta noche: escribe a tu propia clínica por WhatsApp a las 21:30, como si fueras un paciente nuevo. Mira cuánto tardáis en contestar. Si la respuesta llega mañana, ya sabes cuántos pacientes se van cada semana sin que lo veas.</p>
+<p style="margin: 0; font-size: 19px"><strong>P.P.D.</strong> La garantía es por escrito: si en 3 meses no hay al menos un 25 % menos de citas perdidas, te devolvemos el tercer mes y seguimos gratis. El único riesgo es seguir como hasta ahora.</p>
+<a href="#auditoria" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; border-radius: 12px; background: #0A0A0A; color: #FFFFFF; font-weight: 800; text-decoration: none">Pedir la auditoría gratis →</a>
+</div>
+
+<!-- FOOTER -->
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; max-width: 960px; margin: 0 auto; padding: 28px 24px; box-sizing: border-box; border-top: 1px solid #DDDDDD; font-size: 14px; color: #555555">
+<span>Tu Marca · Toledo · +34 [XXX XXX XXX] · [hola@tumarca.es]</span>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="#top" style="color: #555555">Aviso legal</a>
+<a href="#top" style="color: #555555">Privacidad</a>
+<a href="#top" style="color: #555555">Cookies</a>
+</div>
+</div>
+
+<!-- Botón flotante -->
+<div style="position: sticky; bottom: 16px; display: flex; justify-content: center; padding: 0 16px 16px; pointer-events: none">
+<a href="#auditoria" style="pointer-events: auto; display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 999px; background: #0A0A0A; color: #FFFFFF; font-weight: 800; text-decoration: none; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25)">Auditoría gratis · quedan [5] plazas</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":8200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { leads: 40, appts: 300, noshow: 10, price: 50 };
+  }
+  renderVals() {
+    const st = this.state;
+    const num = (v) => { const n = parseFloat(v); return isFinite(n) && n > 0 ? n : 0; };
+    const L = num(st.leads), A = num(st.appts), N = Math.min(num(st.noshow), 100) / 100, P = num(st.price);
+    const fmt = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const round100 = (n) => Math.round(n / 100) * 100;
+    const low = A * N * 0.25 * P * 12;
+    const high = A * N * 0.33 * P * 12 + L * 0.30 * 0.20 * (P * 4) * 12;
+    const out = {
+      lostLine: Math.round(A * N) + ' citas = ' + fmt(A * N * P) + ' €',
+      range: high > 0 ? fmt(round100(low)) + ' – ' + fmt(round100(high)) + ' €' : '0 €'
+    };
+    const stack = [
+      { name: 'Respuesta en segundos, 24/7', desc: 'En el WhatsApp de la clínica de siempre, también por la noche y en fin de semana. Entiende audios.', value: 'Incluido' },
+      { name: 'Citas y recordatorios con confirmación', desc: 'El paciente reserva por mensaje; el día antes confirma o cambia con un botón.', value: 'Incluido' },
+      { name: 'Seguimiento de consultas', desc: 'Quien pregunta y no reserva recibe un recordatorio amable hasta que decide.', value: 'Incluido' },
+      { name: 'Campañas de revisión y reactivación', desc: 'Recordamos la revisión semestral y traemos de vuelta a los pacientes dormidos.', value: '79 €/mes · incluido' },
+      { name: 'Más reseñas en Google', desc: 'Tras cada visita pedimos su opinión a todos los pacientes, con tu enlace de Google.', value: 'Incluido' },
+      { name: 'Informe mensual y revisión', desc: 'Tus números frente al punto de partida, y 30 minutos contigo cada mes.', value: 'Incluido' },
+      { name: 'Puesta en marcha hecha por nosotros', desc: 'Lo montamos, lo conectamos a tu agenda y lo dejamos funcionando en 7 días.', value: '790 € · gratis' }
+    ];
+    const bonuses = [
+      { tag: 'BONO 1', name: 'Auditoría de WhatsApp de tu clínica', desc: 'Lo que ve un paciente nuevo cuando os escribe fuera de horario, con tus números. Para que sepas de dónde partes.', value: 'Gratis' },
+      { tag: 'BONO 2', name: 'Primera campaña de pacientes dormidos', desc: 'Montamos y lanzamos contigo la primera campaña a los pacientes que llevan más de 6 meses sin venir (con su consentimiento).', value: 'Incluido' },
+      { tag: 'BONO 3', name: 'Sesión de 30 minutos con recepción', desc: 'Cómo sacarle partido al asistente y responder mejor por WhatsApp. Para que tu equipo lo vea como ayuda, no como amenaza.', value: 'Incluido' }
+    ];
+    const set = (key) => (e) => this.setState({ [key]: e.target.value });
+    return {
+      stack, bonuses, out,
+      calc: { leads: st.leads, appts: st.appts, noshow: st.noshow, price: st.price },
+      onLeads: set('leads'), onAppts: set('appts'), onNoshow: set('noshow'), onPrice: set('price')
+    };
+  }
+}
+</script>
+</body>
+</html>
